@@ -1,10 +1,9 @@
 const taskInput = document.getElementById("add");
-const lane = document.querySelector(".lane")
-let itemList = []
+const lane = document.querySelector(".lane");
 
 taskInput.addEventListener('keydown', function (e) {
     if (e.code == "Enter") {
-        addTask()
+        addTask();
     }
 })
 
@@ -13,9 +12,16 @@ const addTask = () => {
     if (task == "")
         return
     const newTask = document.createElement('p');
-    newTask.classList.add('task')
-    newTask.setAttribute('draggable','true')
-    newTask.innerText = task
-    lane.appendChild(newTask)
+    newTask.classList.add('task');
+    newTask.setAttribute('draggable', 'true');
+    newTask.innerText = task;
 
+    newTask.addEventListener("dragstart", () => {
+        newTask.classList.add("is-dragging");
+    });
+    newTask.addEventListener("dragend", () => {
+        newTask.classList.remove("is-dragging")
+    });
+
+    lane.appendChild(newTask);
 }
