@@ -1,3 +1,7 @@
-.list-item{
-    display: flex;
+.task{
+    cursor: move;
+}
+.is-dragging{
+    background-color: black;
+    color: white;
 }

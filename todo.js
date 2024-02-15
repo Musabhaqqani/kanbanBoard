@@ -1,4 +1,5 @@
 const taskInput = document.getElementById("add");
+const lane = document.querySelector(".lane")
 let itemList = []
 
 taskInput.addEventListener('keydown', function (e) {
@@ -11,6 +12,10 @@ const addTask = () => {
     const task = taskInput.value;
     if (task == "")
         return
-    itemList.push(task)
-    document.querySelector(".item").innerHTML = itemList.join("<br>")
+    const newTask = document.createElement('p');
+    newTask.classList.add('task')
+    newTask.setAttribute('draggable','true')
+    newTask.innerText = task
+    lane.appendChild(newTask)
+
 }

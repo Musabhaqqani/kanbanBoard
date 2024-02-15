@@ -11,13 +11,22 @@
 <body>
     <input type="text" id="add" placeholder="Type to add">
     <button class="btn" type="submit" onclick="addTask()">Add</button>
-    <div class="container">
+    <div class="lane">
         <p>Todo List : </p>
-        <div class="list-item">
-            <p class="item" draggable="true"></p>
-        </div>
+        <p class="task" draggable="true">task to be done</p>
+        <p class="task" draggable="true">task to be done2</p>
+    </div>
+    <div class="lane">
+        <p>Doing : </p>
+        <p class="task" draggable="true">doing rn</p>
+    </div>
+    <div class="lane">
+        <p>Done : </p>
+        <p class="task" draggable="true">bleh done</p>
+
     </div>
     <script src="todo.js" defer></script>
+    <script src="drag.js" defer></script>
 </body>
 
 </html>
