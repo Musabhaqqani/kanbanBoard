@@ -1,9 +1,11 @@
 const taskInput = document.getElementById("add");
 const lane = document.querySelector(".lane");
 
+
 taskInput.addEventListener('keydown', function (e) {
     if (e.code == "Enter") {
         addTask();
+        taskInput.value = ''
     }
 })
 
