@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Kanban board</title>
+</head>
+
+<body>
+    <input type="text" id="add" placeholder="Type to add">
+    <button class="btn" type="submit" onclick="addTask()">Add</button>
+    <div class="container">
+        <p>Todo List : </p>
+        <div class="list-item">
+            <p class="item" draggable="true"></p>
+        </div>
+    </div>
+    <script src="todo.js" defer></script>
+</body>
+
+</html>
